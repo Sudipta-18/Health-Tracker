@@ -58,7 +58,7 @@ session_start();
 
   <!-- Favicons -->
   <!-- <link href="assets/img/favicon.png" rel="icon"> -->
-  <link rel="icon" type="image/png" href="navicon.svg">
+  <link rel="icon" type="image/png" href="heart.svg">
   
   <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
@@ -85,7 +85,7 @@ session_start();
   <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand" href="index.php" id="nm">
-        <img src="navicon.svg" width="38" height="38" class="d-inline-block align-top" alt="" loading="lazy">
+        <img src="heart.svg" width="38" height="38" class="d-inline-block align-top" alt="" loading="lazy">
         Fit Trac
     </a>
       <!-- <a class="navbar-brand js-scroll" href="#page-top">Fit Trac</a> -->
@@ -128,14 +128,14 @@ session_start();
   </nav>
 
   <!-- ======= Intro Section ======= -->
-  <div id="home" class="intro route bg-image" style="background-image: url(introbg.jpg)">
+  <div id="home" class="intro route bg-image" style="background-image: url(foodhomepg1.jpg)">
     <div class="overlay-itro"></div>
     <div class="intro-content display-table">
       <div class="table-cell">
         <div class="container">
           <!--<p class="display-6 color-d">Hello, world!</p>-->
           <h1 class="intro-title mb-4">Welcome to Fit Trac</h1>
-          <p class="intro-subtitle"><span class="text-slider-items">We are just the bank you need,Apno ka bank,Together we Prosper</span><strong class="text-slider"></strong></p>
+          <p class="intro-subtitle"><span class="text-slider-items">We are just the Health Tracker you need, Together we'll make a difference!</span><strong class="text-slider"></strong></p>
           <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
         </div>
       </div>
@@ -143,81 +143,6 @@ session_start();
   </div><!-- End Intro Section -->
 
   <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <!-- <section id="about" class="about-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="box-shadow-full">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="row">
-                    <div class="col-sm-6 col-md-5">
-                      <div class="about-img">
-                        <img src="assets/img/testimonial-2.jpg" class="img-fluid rounded b-shadow-a" alt="">
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-7">
-                      <div class="about-info">
-                        <p><span class="title-s">Name: </span> <span>Morgan Freeman</span></p>
-                        <p><span class="title-s">Profile: </span> <span>full stack developer</span></p>
-                        <p><span class="title-s">Email: </span> <span>contact@example.com</span></p>
-                        <p><span class="title-s">Phone: </span> <span>(617) 557-0089</span></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="skill-mf">
-                    <p class="title-s">Skill</p>
-                    <span>HTML</span> <span class="pull-right">85%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>CSS3</span> <span class="pull-right">75%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>PHP</span> <span class="pull-right">50%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>JAVASCRIPT</span> <span class="pull-right">90%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="about-me pt-4 pt-md-0">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        About me
-                      </h5>
-                    </div>
-                    <p class="lead">
-                      Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur arcu erat, accumsan id
-                      imperdiet et, porttitor
-                      at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla
-                      porttitor accumsan tincidunt.
-                    </p>
-                    <p class="lead">
-                      Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis
-                      porttitor volutpat. Vestibulum
-                      ac diam sit amet quam vehicula elementum sed sit amet dui. porttitor at sem.
-                    </p>
-                    <p class="lead">
-                      Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-                      Nulla porttitor accumsan
-                      tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>End About Section -->
 
     <!-- ======= Services Section ======= -->
     <section id="service" class="services-mf pt-5 route">
@@ -239,10 +164,10 @@ session_start();
           <div class="col-md-4">
             <div class="service-box">
              <a href="transaction.php"> <div class="service-ico">
-                <span class="ico-circle"><i class="ion-monitor"></i></span>
+                <span class="ico-circle"><i class="fas fa-utensils"></i></span>
               </div></a>
               <div class="service-content">
-                <h2 class="s-title">Transaction</h2>
+                <h2 class="s-title">Diet Calculator</h2>
                 <!-- <p class="s-description text-center">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
                   provident vitae! Magni
@@ -254,10 +179,10 @@ session_start();
           <div class="col-md-4">
             <div class="service-box">
               <a href="transactionsummary.php"> <div class="service-ico">
-                <span class="ico-circle"><i class="ion-stats-bars"></i></span>
+                <span class="ico-circle"><i class="fas fa-dumbbell"></i></span>
               </div></a>
               <div class="service-content">
-                <h2 class="s-title">Balance Summary</h2>
+                <h2 class="s-title">Exercise Calculator</h2>
                 <!-- <p class="s-description text-center">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
                   provident vitae! Magni
@@ -272,7 +197,7 @@ session_start();
                 <span class="ico-circle"><i class="ion-android-phone-portrait"></i></span>
               </div></a>
               <div class="service-content">
-                <h2 class="s-title">Check balance</h2>
+                <h2 class="s-title">Personalized Diet</h2>
                 <!-- <p class="s-description text-center">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
                   provident vitae! Magni
@@ -938,7 +863,7 @@ session_start();
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
                     <!-- Links -->
-                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                    <h6 class="text-uppercase font-weight-bold" style="color :white; ">Contact</h6>
                     <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                     <p>
                         <i class="fas fa-home mr-3"></i>Kumarswamy layout, Bengaluru ,India</p>
@@ -963,7 +888,7 @@ session_start();
     <!-- Copyright -->
     <!-- <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;"> -->
     
-    <div class="footer-copyright text-center text-white py-3 " style="background-color:#1C2331;">© 2020 Copyright:
+    <div class="footer-copyright text-center text-white py-3 " style="background-color:#1C2331;">© 2021 Copyright:
         Fit Trac
         <!--<a  style="color:white;" href="https://mdbootstrap.com/"> ApnaBank.com</a>-->
     </div>
