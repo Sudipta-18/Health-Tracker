@@ -52,7 +52,7 @@ session_start();
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Apna Bank</title>
+  <title>Fit Trac</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
@@ -86,9 +86,9 @@ session_start();
     <div class="container">
       <a class="navbar-brand" href="index.php" id="nm">
         <img src="navicon.svg" width="38" height="38" class="d-inline-block align-top" alt="" loading="lazy">
-        Apna Bank
+        Fit Trac
     </a>
-      <!-- <a class="navbar-brand js-scroll" href="#page-top">APNA BANK</a> -->
+      <!-- <a class="navbar-brand js-scroll" href="#page-top">Fit Trac</a> -->
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span></span>
         <span></span>
@@ -134,7 +134,7 @@ session_start();
       <div class="table-cell">
         <div class="container">
           <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <h1 class="intro-title mb-4">Welcome to APNA BANK</h1>
+          <h1 class="intro-title mb-4">Welcome to Fit Trac</h1>
           <p class="intro-subtitle"><span class="text-slider-items">We are just the bank you need,Apno ka bank,Together we Prosper</span><strong class="text-slider"></strong></p>
           <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
         </div>
@@ -881,9 +881,9 @@ session_start();
                 <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
 
                     <!-- Content -->
-                    <h6 class="text-uppercase font-weight-bold text-white">Apna Bank</h6>
+                    <h6 class="text-uppercase font-weight-bold text-white">Fit Trac</h6>
                     <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto">
-                    <p>Please do not believe any entity using Apna Bank logos & branding to request the public for
+                    <p>Please do not believe any entity using Fit Trac logos & branding to request the public for
                         money
                         in exchange for opening a Customer Service Point.</p>
 
@@ -964,7 +964,7 @@ session_start();
     <!-- <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;"> -->
     
     <div class="footer-copyright text-center text-white py-3 " style="background-color:#1C2331;">© 2020 Copyright:
-        Apna Bank
+        Fit Trac
         <!--<a  style="color:white;" href="https://mdbootstrap.com/"> ApnaBank.com</a>-->
     </div>
     <!-- Copyright -->
