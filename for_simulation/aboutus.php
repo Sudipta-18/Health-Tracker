@@ -26,7 +26,7 @@
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <!--Google Font-->
     <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="navicon.svg">
+    <link rel="icon" type="image/png" href="heart.svg">
     <style>
         body {
             font-family: 'Mulish', sans-serif;
@@ -67,17 +67,18 @@
         }
 
         .dropdown-menu {
-            background-color: #007bff;
+            background-color: black;
             border: none !important;
         }
 
         .dropdown-item {
-            color: #70abff !important;
+            color: black !important;
+            background-color: whitesmoke;
             letter-spacing: 2px;
         }
 
         .dropdown>.dropdown-menu>a:hover {
-            color: #cce5ff !important;
+            color: whitesmoke !important;
             background-color: transparent;
         }
 
@@ -106,7 +107,7 @@
 
         section .section-title {
             text-align: center;
-            color: #007b5e;
+            color: black;
             margin-bottom: 50px;
             text-transform: uppercase;
         }
@@ -117,11 +118,11 @@
 <body>
     <header>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-3 ">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 ">
             <!--<div class="container-fluid">-->
             <a class="navbar-brand" href="index.php" id="nm">
-                <img src="navicon.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-                Apna Bank
+                <img src="heart.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+                Fit Trac
             </a>
             <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -129,20 +130,23 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown bg-primary">
+                    <li class="nav-item dropdown bg-dark">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-expanded="false">
                             Services
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="transaction.php">Transfer Money to own bank</a>
+                            <!--<a class="dropdown-item" href="transaction.php">Transfer Money to own bank</a>
                             <a class="dropdown-item" href="tootherbank.php">Transfer Money to other bank</a>
                             <a class="dropdown-item" href="balance.php">current balance</a>
-                            <a class="dropdown-item" href="feedback.php">Raise a Complaint</a>
+                            <a class="dropdown-item" href="feedback.php">Raise a Complaint</a>-->
+                            <a class="dropdown-item" href="">Diet Calculator</a>
+                            <a class="dropdown-item" href="">Exercise Calculator</a>
+                            <a class="dropdown-item" href="">Personalized Diet</a>
                         </div>
                     </li>
 
-                    <li class="nav-item dropdown bg-primary">
+                    <li class="nav-item dropdown bg-dark">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-expanded="false">
                             Account
@@ -150,7 +154,7 @@
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="profile.php">Profile</a>
 
-                            <a class="dropdown-item" href="transactionsummary.php">Transction details</a>
+                            <!--<a class="dropdown-item" href="transactionsummary.php">Transction details</a>-->
                             <a class="dropdown-item" href="deleteAccount.php">Delete Account</a>
 
                         </div>
@@ -311,9 +315,9 @@ Responsible growth has four pillars: We have to grow — no excuses. We have to 
                     <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
 
                         <!-- Content -->
-                        <h6 class="text-uppercase font-weight-bold text-white">Apna Bank</h6>
+                        <h6 class="text-uppercase font-weight-bold text-white">Fit Trac</h6>
                         <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                        <p>Please do not believe any entity using Apna Bank logos & branding to request the public for
+                        <p>Please do not believe any entity using Fit Trac logos & branding to request the public for
                             money
                             in exchange for opening a Customer Service Point.</p>
 
@@ -393,8 +397,8 @@ Responsible growth has four pillars: We have to grow — no excuses. We have to 
         <!-- Copyright -->
         <!-- <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;"> -->
         
-        <div class="footer-copyright text-center text-white py-3 " style="background-color:#1C2331;">© 2020 Copyright:
-            Apna Bank
+        <div class="footer-copyright text-center text-white py-3 " style="background-color:#1C2331;">© 2021 Copyright:
+            Fit Trac
             <!--<a  style="color:white;" href="https://mdbootstrap.com/"> ApnaBank.com</a>-->
         </div>
         <!-- Copyright -->

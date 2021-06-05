@@ -146,7 +146,16 @@ if (!isset($_SESSION['count'])) {
 	<title>Login Page</title>
 	<!-- <link rel="stylesheet" href="loginstyle.css"> -->
 	<link rel="stylesheet" type="text/css" href="loginstyle.css">
-	<link rel="icon" type="image/png" href="navicon.svg">
+	<link rel="icon" type="image/png" href="heart.svg">
+
+	<style>
+         body {
+            background: url(foodhomepg1.jpg) no-repeat fixed center;
+			background-size: cover;
+			background-position: center;
+			background-color: white;
+         }
+    </style>
 
 </head>
 <body>
@@ -154,8 +163,8 @@ if (!isset($_SESSION['count'])) {
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-3 funny">
             
                 <a class="navbar-brand" href="index.php" id="nm">
-                    <img src="navicon.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-                    Apna Bank
+                    <img src="heart.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+                    Fit Trac
                 </a>
                 <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -206,7 +215,7 @@ if (!isset($_SESSION['count'])) {
     </nav>
 <!--  end of navbar -->
 	<!--<div class="name">
-			<h1>Apna Bank</h1>
+			<h1>Fit Trac</h1>
 		</div>-->
 	
 	

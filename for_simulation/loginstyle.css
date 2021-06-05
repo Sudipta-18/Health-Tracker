@@ -12,7 +12,7 @@ body{
    text-align: center;
   font-family: sans-serif;
    justify-content: center;
-  background: url(b.jpg) no-repeat fixed center;
+  background: url(foodhomepg1.jpg) no-repeat fixed center !important;
   background-size: cover;
   background-position: center;
   background-color: white;
@@ -33,7 +33,7 @@ body{
   background: whitesmoke;
   padding: 60px 40px;
   border-radius: 0.5em;
-  box-shadow: 4px 8px 8px #005b74;
+  /*box-shadow: 4px 8px 8px #005b74;*/
 }
 header{
   font-size: 40px;
