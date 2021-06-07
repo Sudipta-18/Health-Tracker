@@ -160,7 +160,7 @@ if (!isset($_SESSION['count'])) {
 </head>
 <body>
 	<!-- Image and text for navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-3 funny">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 funny">
             
                 <a class="navbar-brand" href="index.php" id="nm">
                     <img src="heart.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
@@ -172,7 +172,7 @@ if (!isset($_SESSION['count'])) {
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown bg-primary">
+                    <li class="nav-item dropdown bg-dark">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-expanded="false">
                                 Services
@@ -185,7 +185,7 @@ if (!isset($_SESSION['count'])) {
                             </div>
                         </li>
                        
-                    <li class="nav-item dropdown bg-primary">
+                    <li class="nav-item dropdown bg-dark">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-expanded="false">
                                 Account

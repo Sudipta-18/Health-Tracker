@@ -157,7 +157,7 @@ server with default setting (user 'root' with no password) */
 <body>
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary p-3 ">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 ">
             <!--<div class="container-fluid">-->
                 <a class="navbar-brand" href="index.php" id="nm">
                     <img src="navicon.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
@@ -173,7 +173,7 @@ server with default setting (user 'root' with no password) */
                             <a class="nav-link" href="index.php">Home 
                             </a>
                         </li>
-                        <li class="nav-item dropdown bg-primary">
+                        <li class="nav-item dropdown bg-dark">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-expanded="false">
                                 Services
@@ -201,7 +201,7 @@ server with default setting (user 'root' with no password) */
 
 
     <!--For a alert to check filled info-->
-    <div class="alert alert-primary" role="alert">
+    <div class="alert alert-dark" role="alert">
         Go through the information you filled correctly before submitting.
     </div>
     <div>
@@ -210,7 +210,7 @@ server with default setting (user 'root' with no password) */
 
 
     <div class="container">
-        <div class="info" id="personalInf">
+        <div class="info" id="personalInf"   style="background-color:#212529d6">
             <p id="pi">Personal Information</p>
         </div>
     </div>
@@ -266,7 +266,7 @@ server with default setting (user 'root' with no password) */
             </div>
 
 
-            <div class="info" id="addressInf">
+            <div class="info" id="addressInf" style="background-color:#212529d6">
                 <p id="pi">Address Information</p>
             </div>
 
@@ -310,7 +310,7 @@ server with default setting (user 'root' with no password) */
                 </div>
             </div>
 
-            <div class="info" id="accountInf">
+            <div class="info" id="accountInf" style="background-color:#212529d6">
                 <p id="pi">Account Information</p>
             </div>
 
@@ -326,7 +326,7 @@ server with default setting (user 'root' with no password) */
                     </div>
                 </div>
 
-                <div class="info" id="pswdInf">
+                <div class="info" id="pswdInf" style="background-color:#212529d6">
                     <p id="pi">Password field</p>
                 </div>
 
@@ -361,7 +361,7 @@ server with default setting (user 'root' with no password) */
     </div>
     </div>
     <center>
-        <button name="submit" class="btn btn-outline-primary" type="submit">Submit form</button>
+        <button name="submit" class="btn btn-outline-dark" type="submit">Submit form</button>
     </center>
     </form>
     </div>
