@@ -93,7 +93,7 @@ server with default setting (user 'root' with no password) */
                             $mail->isHTML(true);
                             $mail->setFrom('no-reply@apnabank.com');
                             $mail->Subject='Welcome '.$f_name;
-                            $mail->Body='We welcome you to Apna Bank.<br>
+                            $mail->Body='We welcome you to Fit Trac.<br>
                                             Thanks for choosing us.<br>
                                             Your transaction password is '.$email_txn.'
                                             .<br>You can change this by login into your account and modifying
@@ -144,7 +144,7 @@ server with default setting (user 'root' with no password) */
     <!--External CSS-->
     <link rel="stylesheet" href="newAccountStyle.css">
     <title>Create Account</title>
-    <link rel="icon" type="image/png" href="navicon.svg">
+    <link rel="icon" type="image/png" href="heart.svg">
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -152,6 +152,20 @@ server with default setting (user 'root' with no password) */
     <!--External JS-->
     <script src="newAccount.js"></script>
     <script src="cities.js"></script>
+
+    <style> 
+            .dropdown-menu{
+        background-color: black;
+        border: none !important;
+        }
+
+        .dropdown-item{
+        color: whitesmoke !important;
+        letter-spacing: 2px;
+        
+    </style>
+
+
 </head>
 
 <body>
@@ -160,8 +174,8 @@ server with default setting (user 'root' with no password) */
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 ">
             <!--<div class="container-fluid">-->
                 <a class="navbar-brand" href="index.php" id="nm">
-                    <img src="navicon.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-                    Apna Bank
+                    <img src="heart.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+                    Fit Trac
                 </a>
                 <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -179,10 +193,13 @@ server with default setting (user 'root' with no password) */
                                 Services
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="transaction.php">Send Money to own bank</a>
-                                <a class="dropdown-item" href="tootherbank.php">Send Money to other bank</a>
-                                <a class="dropdown-item" href="balance.php">current balance</a>
-                                <a class="dropdown-item" href="#">Raise a Complaint</a>
+                            <!--<a class="dropdown-item" href="transaction.php">Transfer Money to own bank</a>
+                            <a class="dropdown-item" href="tootherbank.php">Transfer Money to other bank</a>
+                            <a class="dropdown-item" href="balance.php">current balance</a>
+                            <a class="dropdown-item" href="feedback.php">Raise a Complaint</a>-->
+                            <a class="dropdown-item" href="">Diet Calculator</a>
+                            <a class="dropdown-item" href="">Exercise Calculator</a>
+                            <a class="dropdown-item" href="">Personalized Diet</a>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -368,7 +385,7 @@ server with default setting (user 'root' with no password) */
     <!-- Footer -->
     <footer class="page-footer font-small blue  pt-4">
 
-        <div class="footer-copyright text-center py-3">© 2020 Copyright: Apna Bank
+        <div class="footer-copyright text-center py-3">© 2021 Copyright: Fit Trac
         </div>
 
     </footer>

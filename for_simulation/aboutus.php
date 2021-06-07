@@ -35,6 +35,18 @@
             background: #eee !important;
         }
 
+
+        .dropdown-menu{
+        background-color: black;
+        border: none !important;
+        }
+        .dropdown-item{
+            color: whitesmoke !important;
+            letter-spacing: 2px;
+        }
+
+
+
         #nm {
             letter-spacing: 3px;
         }
@@ -66,7 +78,7 @@
             letter-spacing: 3px;
         }
 
-        .dropdown-menu {
+        /* .dropdown-menu {
             background-color: black;
             border: none !important;
         }
@@ -75,7 +87,7 @@
             color: black !important;
             background-color: whitesmoke;
             letter-spacing: 2px;
-        }
+        }*/
 
         .dropdown>.dropdown-menu>a:hover {
             color: whitesmoke !important;
@@ -111,6 +123,10 @@
             margin-bottom: 50px;
             text-transform: uppercase;
         }
+
+
+
+
     </style>
 
 </head>

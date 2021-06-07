@@ -25,14 +25,14 @@ body{
 	padding-top: 10px;
 	letter-spacing: 3px;
 }
-.dropdown-menu{
-	background-color: #007bff;
+/* .dropdown-menu{
+	background-color: black;
 	border: none !important;
 }
 .dropdown-item{
-	color: #70abff !important;
+	color: whitesmoke !important;
 	letter-spacing: 2px;
-}
+}*/
 .dropdown>.dropdown-menu>a:hover {
  	color: #cce5ff !important;
 	background-color: transparent;
