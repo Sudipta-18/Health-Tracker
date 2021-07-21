@@ -200,38 +200,7 @@
 	</form> -->
 
 
-    <div class="fuggy">
-        <div>
-            <?php 
-	if(empty($str))
-{
-	if(empty($var2))
-	{echo $string;}
-	else
-	{echo $var2;}
-}
-else
-echo $str;
-	
-	?>
-        </div>
-    </div>
 
-    <?php
-
-if (isset($_GET['msg']))
-{
-  // echo '<div class="success_message"></p> <p></div>' ;
-//    echo '<div><h6 style="color:red; font-weight:600;" >Session Expired, please login again!<h6></div>';
-echo '<div class="fuggy">
-<div class="alert alert-danger" role="alert">
-Session Expired, please login again!
-</div>
-</div>';
-
-}
-
-?>
 
     <div class="container">
 
@@ -250,7 +219,7 @@ Session Expired, please login again!
             <div class="button" name="submit">
                 <div class="inner">
                 </div>
-                <?php echo $var?>
+
                 <!-- <button type="submit" formaction="index.php">SIGN IN</button> -->
             </div>
         </form>
