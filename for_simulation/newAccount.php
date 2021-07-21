@@ -29,6 +29,7 @@ server with default setting (user 'root' with no password) */
     $height='';
     $weight='';
     $bmi='';
+    $gender='';
     $string='';
     if(array_key_exists("submit",$_POST))
     {
@@ -42,6 +43,7 @@ server with default setting (user 'root' with no password) */
         $dob=$_POST['dob'];
         $height=$_POST['height'];
         $weight=$_POST['weight'];
+        $gender=$_POST['gender'];
         if(strlen($phone_number)==10)
         {
             // Attempt insert query execution
