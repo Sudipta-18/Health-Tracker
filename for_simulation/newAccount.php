@@ -283,65 +283,16 @@ server with default setting (user 'root' with no password) */
             </div>
 
 
-            <div class="info" id="addressInf" style="background-color:#212529d6">
-                <p id="pi">Address Information</p>
-            </div>
+            
 
 
-            <div class="form-row">
-                <div class="col-md-12 mb-3">
-                    <label for="address">Address</label>
-                    <input type="text" name="address" class="form-control" id="address" required>
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
-                </div>
-            </div>
+            
 
-
-            <div class="form-row">
-            <div class="col-md-6 mb-3">
-                    <label for="state">State</label>
-                    <select onchange="print_city('state', this.selectedIndex);" id="sts" name ="state" class="form-control" required></select>
-                   <!-- <input type="text" class="form-control" name="state" id="state" required>
-                    <div class="invalid-feedback">
-                        Please select a valid state.
-                    </div> -->
-                </div>
-
-                <div class="col-md-3 mb-3">
-                    <label for="city">City</label>
-                    <select id ="state" class="form-control" name="city" required></select>
-                    <!--<input type="text" class="form-control" name="city" id="city" required>
-                    <div class="invalid-feedback">
-                        Please provide a valid city.
-                    </div>-->
-                </div>
+            
                 
-                <div class="col-md-3 mb-3">
-                    <label for="zip">Zip</label>
-                    <input type="number" class="form-control" name="zip" id="zip" required>
-                    <div class="invalid-feedback">
-                        Please provide a valid zip.
-                    </div>
-                </div>
-            </div>
+              
 
-            <div class="info" id="accountInf" style="background-color:#212529d6">
-                <p id="pi">Account Information</p>
-            </div>
-
-            <div class="form-group">
-                <div class="form-row">
-                    <div class="col-md-12 mb-3">
-                        <label for="accountType">Account type</label>
-                        <select class="form-control" name="accountType" id="accountType" required>
-                            <option selected hidden value=""></option>
-                            <option>Savings</option>
-                            <option>Current</option>
-                        </select>
-                    </div>
-                </div>
+            
 
                 <div class="info" id="pswdInf" style="background-color:#212529d6">
                     <p id="pi">Password field</p>
