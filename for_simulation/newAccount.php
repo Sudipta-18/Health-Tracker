@@ -292,7 +292,7 @@ server with default setting (user 'root' with no password) */
             </div>
 
             <div class="col-md-3 mb-3">
-                    <label for="weight">Height</label>
+                    <label for="weight">Weight</label>
                     <input type="int" class="form-control" name="weight" id="weight"  required>
                     <div class="valid-feedback">
                         Looks good!
