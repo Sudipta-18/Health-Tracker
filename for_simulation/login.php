@@ -1,51 +1,6 @@
 <?php
 	session_start();
 	
-if (!isset($_SESSION['count'])) {
-	$_SESSION['count'] = 0;
-  } 
-  
-  if($_SESSION['count']<3)
-  {
-	//   $var='<input type="submit" name="submit" value="Sign In">';
-	$var=' <button type="submit" name="submit" >SIGN IN</button>';
-	  
-  }
-  if($_SESSION['count'] >= 3)
-  {
-	  // echo 'Your session is locked for 30 minutes.';
-	  $var2='<div class="alert alert-danger" role="alert">
-	  Your session is locked for 30 seconds.</div>';
-	//   $var='<input type="submit" name="submit" value="Sign In"  disabled>';
-	$var=' <button type="submit" name="submit" disabled>SIGN IN</button>';
-	  
-	  
-  
-	  if(isset($_SESSION['timeout']) )
-	  {
-		 
-	  }
-	  else
-	  {
-		$_SESSION['timeout'] = time();
-	  }
-	  $st = $_SESSION['timeout'] + 30; 
-	  // echo $st;//session time is 30 seconds
-	  // echo time();
-	 
-	  if(time() >= $st) {
-		 $str='<div class="alert alert-danger" role="alert">
-					   Your session is unlocked, Try now!</div>';
-	   $var='<input type="submit" name="submit" value="Sign In">';
-	   $var=' <button type="submit" name="submit" >SIGN IN</button>';  
-		//   session_destroy("count");
-		//   session_destroy("timeout");
-		  unset($_SESSION['count']);
-		  unset($_SESSION['timeout']);
-	  }
-  
-  }
-  
 	if(array_key_exists("logout",$_GET))
 	{
 		session_destroy();
@@ -64,7 +19,7 @@ if (!isset($_SESSION['count'])) {
 	
 	$string='';
 	$email='';
-	$account_number='';
+	$id='';
 	$name='';
 	if(array_key_exists("submit", $_POST))
 	{
@@ -76,7 +31,7 @@ if (!isset($_SESSION['count'])) {
 		else
 		{
 			$email=$_POST['login'];
-			$query="SELECT account_number,full_name from personal_info where '".$email."'=email";
+			$query="SELECT id,name from personal_info where '".$email."'=email";
 			if($result=mysqli_query($link,$query))
 			{
 				$row=mysqli_fetch_array($result);
@@ -87,9 +42,9 @@ if (!isset($_SESSION['count'])) {
 				}
 				else
 				{
-					$account_number=$row[0];
+					$id=$row[0];
 					$name=$row[1];
-					$query="SELECT password from personal_info where ".$account_number."=account_number";
+					$query="SELECT password from personal_info where ".$id."=id";
 					if($result=mysqli_query($link,$query))
 					{
 						$row=mysqli_fetch_array($result);
@@ -97,13 +52,12 @@ if (!isset($_SESSION['count'])) {
 						{
 							// $string='<div class="alert alert-success" role="alert">
   					// 	Welcome back!! You are successfully logged in.</div>';
-							$_SESSION['login']=$account_number;
+							$_SESSION['login']=$id;
 							$_SESSION['name']=$name;
 							$_SESSION['email']=$email;
-							$_SESSION['start']= time(); // Taking now logged in time.
-							// // Ending a session in 30 minutes from the starting time.
-							$_SESSION['expire'] = $_SESSION['start'] + (10 * 60);
-							// header("location: index.php");
+							
+							
+					
 							header("location: index.php");
 
 						}
@@ -111,7 +65,7 @@ if (!isset($_SESSION['count'])) {
 						{
 							$string='<div class="alert alert-danger" role="alert">
 						  Incorrect LoginID or Password</div>';
-						  $_SESSION['count']++;
+					
 
 						}
 					}
