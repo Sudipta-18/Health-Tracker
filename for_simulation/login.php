@@ -217,10 +217,8 @@
                 <label>Enter Password</label>
             </div>
             <div class="button" name="submit">
-                <div class="inner">
-                </div>
 
-                <!-- <button type="submit" formaction="index.php">SIGN IN</button> -->
+                <button type="submit">SIGN IN</button>
             </div>
         </form>
 
