@@ -1,5 +1,5 @@
 <?php
-    use PHPMailer\PHPMailer\PHPMailer;
+    
     session_start();
     $_SESSION['action']='';
     
@@ -23,17 +23,13 @@ server with default setting (user 'root' with no password) */
     $email='';
     //$name=$_GET['gender'];
     $phone_number='';
-    $address='';
-    $city='';
-    $state='';
-    $zip='';
-    $full_address='';     //concatenating into single string
     $password='';
-    $txn_password='';
     $dob='';
     $currentDate=date('Y-m-d');
+    $height='';
+    $weight='';
+    $bmi='';
     $string='';
-    $otp='';
     if(array_key_exists("submit",$_POST))
     {
         $f_name=$_POST['fname'];
@@ -42,65 +38,24 @@ server with default setting (user 'root' with no password) */
         $email=$_POST['email'];
         //$name=$_GET['gender'];
         $phone_number=$_POST['phone'];
-        $address=$_POST['address'];
-        $city=$_POST['city'];
-        $state=$_POST['state'];
-        $zip=$_POST['zip'];
-        $full_address=$address." ".$city." ".$state." ".$zip;     //concatenating into single string
         $password=md5(md5($email).$_POST['password']);
         $dob=$_POST['dob'];
-        $email_txn=bin2hex(random_bytes(4));
-        $txn_password=md5(md5($email).$email_txn);
-        $d1 =new DateTime($currentDate);
-        $d2  = new DateTime($_POST['dob']);
-
-        $diff = $d2->diff($d1);
+        $height=$_POST['height'];
+        $weight=$_POST['weight'];
         if(strlen($phone_number)==10)
         {
             // Attempt insert query execution
-            if($diff->y<18 )
-            {   
-                    $string='<div class="alert alert-danger" role="alert">
-                                Age must be 18 or above</div>';
-            }
-            else
-            {    
+            
+              
                 $query="SELECT count(email) from personal_info where '".$email."'=email";
                 $result=mysqli_query($link,$query);
                 $row=mysqli_fetch_array($result);
                 if($row[0]==0)
                 {
-                    $sql = "INSERT INTO personal_info(full_name,email,contact_number,dob,address,password,txn_password,otp)
-                                values ('$full_name','$email','$phone_number','$dob','$full_address','$password','$txn_password','$otp')";
-                    if(mysqli_query($link, $sql)){
-                        
-                        $last_id = mysqli_insert_id($link);     // Obtain last inserted id
-                        //echo "Records inserted successfully. Last inserted ID is: " . $last_id;
-                        // this section will managed automatic generated mail to the new user
-                        // and send them a one time trasaction password.
-                            require_once "PHPMailer/PHPMailer.php";
-                            require_once "PHPMailer/SMTP.php";
-                            require_once "PHPMailer/Exception.php";
-                            $mail= new PHPMailer();
-                            $mail->isSMTP();
-                            $mail->Host='smtp.gmail.com';
-                            $mail->SMTPAuth=true;
-                            $mail->Username='apnabankcc@gmail.com';
-                            $mail->Password='apnabankphp@2';
-                            $mail->Port='465';
-                            $mail->SMTPSecure='ssl';
-                         
-                            $mail->isHTML(true);
-                            $mail->setFrom('no-reply@apnabank.com');
-                            $mail->Subject='Welcome '.$f_name;
-                            $mail->Body='We welcome you to Fit Trac.<br>
-                                            Thanks for choosing us.<br>
-                                            Your transaction password is '.$email_txn.'
-                                            .<br>You can change this by login into your account and modifying
-                                            transaction password.';
-                            $mail->addAddress($email);
-                            $mail->send();
-
+                    $sql = "INSERT INTO personal_info(name,email,phone,dob,password,gender)
+                                values ('$full_name','$email','$phone_number','$dob','$password',$gender,$height,$weight,$bmi)";
+                    if(mysqli_query($link, $sql)){          
+                        $last_id = mysqli_insert_id($link); 
                         // email section ends here
                         header("location: login.php");
                     }
@@ -110,7 +65,7 @@ server with default setting (user 'root' with no password) */
                      $string='<div class="alert alert-danger" role="alert">
                             This email id has already been used.Try another!!</div>';
                 }
-            }
+            
         }
         else
         {
@@ -153,16 +108,15 @@ server with default setting (user 'root' with no password) */
     <script src="newAccount.js"></script>
     <script src="cities.js"></script>
 
-    <style> 
-            .dropdown-menu{
+    <style>
+    .dropdown-menu {
         background-color: black;
         border: none !important;
-        }
+    }
 
-        .dropdown-item{
+    .dropdown-item {
         color: whitesmoke !important;
         letter-spacing: 2px;
-        
     </style>
 
 
@@ -171,50 +125,50 @@ server with default setting (user 'root' with no password) */
 <body>
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 ">
-            <!--<div class="container-fluid">-->
-                <a class="navbar-brand" href="index.php" id="nm">
-                    <img src="heart.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-                    Fit Trac
-                </a>
-                <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php">Home 
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown bg-dark">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-expanded="false">
-                                Services
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <!--<a class="dropdown-item" href="transaction.php">Transfer Money to own bank</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 ">
+        <!--<div class="container-fluid">-->
+        <a class="navbar-brand" href="index.php" id="nm">
+            <img src="heart.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+            Fit Trac
+        </a>
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php">Home
+                    </a>
+                </li>
+                <li class="nav-item dropdown bg-dark">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <!--<a class="dropdown-item" href="transaction.php">Transfer Money to own bank</a>
                             <a class="dropdown-item" href="tootherbank.php">Transfer Money to other bank</a>
                             <a class="dropdown-item" href="balance.php">current balance</a>
                             <a class="dropdown-item" href="feedback.php">Raise a Complaint</a>-->
-                            <a class="dropdown-item" href="">Diet Calculator</a>
-                            <a class="dropdown-item" href="">Exercise Calculator</a>
-                            <a class="dropdown-item" href="">Personalized Diet</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="aboutus.php">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">My Account</a>
-                        </li>
-                        
-                        
-                    </ul>
-                </div>
-            <!--</div>-->
-            </div>
-        </nav>
+                        <a class="dropdown-item" href="">Diet Calculator</a>
+                        <a class="dropdown-item" href="">Exercise Calculator</a>
+                        <a class="dropdown-item" href="">Personalized Diet</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.php">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">My Account</a>
+                </li>
+
+
+            </ul>
+        </div>
+        <!--</div>-->
+        </div>
+    </nav>
 
 
     <!--For a alert to check filled info-->
@@ -227,7 +181,7 @@ server with default setting (user 'root' with no password) */
 
 
     <div class="container">
-        <div class="info" id="personalInf"   style="background-color:#212529d6">
+        <div class="info" id="personalInf" style="background-color:#212529d6">
             <p id="pi">Personal Information</p>
         </div>
     </div>
@@ -283,64 +237,64 @@ server with default setting (user 'root' with no password) */
             </div>
 
             <div class="col-md-3 mb-3">
-                    <label for="height">Height</label>
-                    <input type="int" class="form-control" name="height" id="height"  required>
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
+                <label for="height">Height</label>
+                <input type="int" class="form-control" name="height" id="height" required>
+                <div class="valid-feedback">
+                    Looks good!
                 </div>
             </div>
+    </div>
 
-            <div class="col-md-3 mb-3">
-                    <label for="weight">Weight</label>
-                    <input type="int" class="form-control" name="weight" id="weight"  required>
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
+    <div class="col-md-3 mb-3">
+        <label for="weight">Weight</label>
+        <input type="int" class="form-control" name="weight" id="weight" required>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="info" id="pswdInf" style="background-color:#212529d6">
+        <p id="pi">Password field</p>
+    </div>
+
+    <div class="form-group">
+        <div class="form-row">
+            <div class="col-md-12 mb-3">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" placeholder="Enter Password" name="password" id="password"
+                    minlength="7" required>
+                <div class="invalid-feedback">
+                    Please provide password with atleast 7 characters
                 </div>
             </div>
-
-
-            
-
-
-            
-                
-                
-            
-
-                <div class="info" id="pswdInf" style="background-color:#212529d6">
-                    <p id="pi">Password field</p>
-                </div>
-
-                <div class="form-group">
-                    <div class="form-row">
-                        <div class="col-md-12 mb-3">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" placeholder="Enter Password" name="password"
-                                id="password" minlength="7"  required>
-                                <div class="invalid-feedback">
-                                        Please provide password with atleast 7 characters
-                                </div>
-                        </div>
-                        <div class="col-md-12 mb-3">
-                            <label for="confirmPassword">Confirm Password</label>
-                            <input type="password" class="form-control" placeholder="Confirm your Password"
-                                name="confirmPassword" id="confirmPassword" minlength="7" required>                                 
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                    <label class="form-check-label" for="invalidCheck">
-                        Agree to terms and conditions
-                    </label>
-                    <div class="invalid-feedback">
-                        You must agree before submitting.
-                    </div>
-                </div>
+            <div class="col-md-12 mb-3">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" class="form-control" placeholder="Confirm your Password" name="confirmPassword"
+                    id="confirmPassword" minlength="7" required>
             </div>
+        </div>
+    </div>
+
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+        <label class="form-check-label" for="invalidCheck">
+            Agree to terms and conditions
+        </label>
+        <div class="invalid-feedback">
+            You must agree before submitting.
+        </div>
+    </div>
+    </div>
     </div>
     </div>
     <center>
@@ -357,40 +311,44 @@ server with default setting (user 'root' with no password) */
     </footer>
     <!-- Footer -->
 
-    <script language="javascript">print_state("sts");</script>
-    <script>$('.selectpicker').selectpicker({
+    <script language="javascript">
+    print_state("sts");
+    </script>
+    <script>
+    $('.selectpicker').selectpicker({
         dropupAuto: false
-    });</script>
+    });
+    </script>
     <!--THIS SCRIPT IS FOR CHECKING IF THE INFORMATION IS FILLED IN FORM-->
     <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (function () {
-            'use strict';
-            window.addEventListener('load', function () {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function (form) {
-                    form.addEventListener('submit', function (event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
     </script>
     <!--TILL HERE-->
 
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-        crossorigin="anonymous"></script>
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
 
 
 </body>
