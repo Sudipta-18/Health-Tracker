@@ -21,8 +21,10 @@
 	$email='';
 	$id='';
 	$name='';
+    $debug='';
+    
 	if(array_key_exists("submit", $_POST))
-	{
+	{echo '<script>alert("I am working good")</script>';
 		if(!$_POST['login'] or !$_POST['password'])
 		{
 			$string='<div class="alert alert-danger" role="alert">
@@ -30,10 +32,13 @@
 		}
 		else
 		{
+            
 			$email=$_POST['login'];
 			$query="SELECT id,name from personal_info where '".$email."'=email";
+            
 			if($result=mysqli_query($link,$query))
 			{
+                
 				$row=mysqli_fetch_array($result);
 				if(!isset($row))
 				{
@@ -45,11 +50,14 @@
 					$id=$row[0];
 					$name=$row[1];
 					$query="SELECT password from personal_info where ".$id."=id";
+                   
 					if($result=mysqli_query($link,$query))
-					{
+					{   
+                       
 						$row=mysqli_fetch_array($result);
 						if($row[0]==md5(md5($email).$_POST['password']))
 						{
+                          
 							// $string='<div class="alert alert-success" role="alert">
   					// 	Welcome back!! You are successfully logged in.</div>';
 							$_SESSION['login']=$id;
@@ -216,11 +224,11 @@
                 <span class="show">SHOW</span>
                 <label>Enter Password</label>
             </div>
-            <div class="button" name="submit">
+            <div class="button">
                 <div class="inner">
                 </div>
 
-                <button type="submit">SIGN IN</button>
+                <button type="submit" name="submit">SIGN IN</button>
             </div>
         </form>
 

@@ -21,14 +21,12 @@ server with default setting (user 'root' with no password) */
     $l_name='';
     $full_name='';     //concatenating into single string
     $email='';
-    //$name=$_GET['gender'];
     $phone_number='';
     $password='';
     $dob='';
-    $currentDate=date('Y-m-d');
     $height='';
     $weight='';
-    $bmi='';
+    $bmi='0';
     $gender='';
     $string='';
     if(array_key_exists("submit",$_POST))
@@ -37,7 +35,6 @@ server with default setting (user 'root' with no password) */
         $l_name=$_POST['lname'];
         $full_name=$f_name." ".$l_name;     //concatenating into single string
         $email=$_POST['email'];
-        //$name=$_GET['gender'];
         $phone_number=$_POST['phone'];
         $password=md5(md5($email).$_POST['password']);
         $dob=$_POST['dob'];
@@ -54,9 +51,11 @@ server with default setting (user 'root' with no password) */
                 $row=mysqli_fetch_array($result);
                 if($row[0]==0)
                 {
-                    $sql = "INSERT INTO personal_info(name,email,phone,dob,password,gender)
-                                values ('$full_name','$email','$phone_number','$dob','$password',$gender,$height,$weight,$bmi)";
-                    if(mysqli_query($link, $sql)){          
+                    echo $dob;
+                    $sql = "INSERT INTO personal_info(name,email,phone,dob,password,gender,height,weight,bmi)
+                                values ('$full_name','$email','$phone_number','$dob','$password','$gender','$height','$weight','$bmi')";
+                    if(mysqli_query($link, $sql)){
+                        echo "I am fine here also";
                         $last_id = mysqli_insert_id($link); 
                         // email section ends here
                         header("location: login.php");
