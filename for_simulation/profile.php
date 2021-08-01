@@ -105,7 +105,7 @@
                     </div>
                 </li>
 
-                <li class="nav-item dropdown bg-primary">
+                <!-- <li class="nav-item dropdown bg-primary">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-expanded="false">
                         Account
@@ -117,7 +117,7 @@
                         <a class="dropdown-item" href="deleteAccount.php">Delete Account</a>
 
                     </div>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Home
                     </a>
