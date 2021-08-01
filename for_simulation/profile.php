@@ -98,10 +98,10 @@
                         Services
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="transaction.php">Transfer Money to own bank</a>
-                        <a class="dropdown-item" href="tootherbank.php">Transfer Money to other bank</a>
-                        <a class="dropdown-item" href="balance.php">current balance</a>
-                        <a class="dropdown-item" href="feedback.php">Raise a Complaint</a>
+                        <a class="dropdown-item" href="bmi.php">Calculate BMI</a>
+                        <a class="dropdown-item" href="optimalintake.html">Optimal Intake</a>
+                        <a class="dropdown-item" href="balance.php">Calorie Tracking</a>
+                        <a class="dropdown-item" href="feedback.php">Workout Tracking</a>
                     </div>
                 </li>
 
