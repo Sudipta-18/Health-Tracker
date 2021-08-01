@@ -4,7 +4,7 @@
 	if((array_key_exists("login", $_SESSION) and $_SESSION["login"]))
 	{
 		$submit='<button type="submit"
-		class="btn btn-warning ml-3" onclick="calory()">Update</button>';
+		class="btn btn-warning ml-3" name="submit" onclick="calory()">Update</button>';
 	}
 	$link=mysqli_connect("remotemysql.com","aWheyM4OjS","uSZzAjPiCI","aWheyM4OjS");
 	if(mysqli_connect_error())
@@ -18,7 +18,7 @@
 		$query="INSERT INTO food_tracking(id,calories,date) values ('$id','$calories','$date')";
 
 		$result=mysqli_query($link,$query);
-		//header("location: profile.php");
+		header("location: profile.php");
 		
 	}
 		
@@ -75,6 +75,60 @@
 
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-3 ">
+        <!--<div class="container-fluid">-->
+        <a class="navbar-brand" href="index.php" id="nm">
+            <img src="heart.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+            Fit Trac
+        </a>
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown bg-primary">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="bmi.php">Calculate BMI</a>
+                        <a class="dropdown-item" href="optimalintake.html">Optimal Intake</a>
+                        <a class="dropdown-item" href="balance.php">Calorie Tracking</a>
+                        <a class="dropdown-item" href="feedback.php">Workout Tracking</a>
+                    </div>
+                </li>
+
+                <!-- <li class="nav-item dropdown bg-primary">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-expanded="false">
+                        Account
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="profile.php">Profile</a>
+
+                        <a class="dropdown-item" href="transactionsummary.php">Transction details</a>
+                        <a class="dropdown-item" href="deleteAccount.php">Delete Account</a>
+
+                    </div>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php">Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.php">About</a>
+                </li>
+
+
+
+            </ul>
+        </div>
+        <!--</div>-->
+        </div>
+    </nav>
     <div class="box">
 
         <form method="post">
@@ -106,7 +160,8 @@
             </div>
             <div class="row mb-2">
                 <div class="col col-sm-4"><label class="lab3">Result</label></div>
-                <div class="col col-sm-6 input-group"><input class="form-control" type="text" id="result" readonly />
+                <div class="col col-sm-6 input-group"><input class="form-control" type="text" id="result" name="result"
+                        readonly />
                     <div class="input-group-append">
                         <span class="input-group-text">Calories</span>
                     </div>

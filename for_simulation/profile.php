@@ -24,13 +24,15 @@
   }
     $string='';
     
-    
+      $date=date("Y-m-d");
       $query="select name from personal_info where ".$_SESSION['login']."=id";
       $query1="select email from personal_info where ".$_SESSION['login']."=id";
       $query2="select bmi from personal_info where ".$_SESSION['login']."=id";
       $query3="select phone from personal_info where ".$_SESSION['login']."=id";
       $query4="select dob from personal_info where ".$_SESSION['login']."=id";
       $query5="select gender from personal_info where ".$_SESSION['login']."=id";
+      $query6="SELECT sum(calories) from food_tracking where ".$_SESSION['login']."=id and date='$date'";
+
 
       $result=mysqli_query($link,$query);
       $row=mysqli_fetch_array($result);
@@ -44,14 +46,17 @@
       $row4=mysqli_fetch_array($result4);
       $result5=mysqli_query($link,$query5);
       $row5=mysqli_fetch_array($result5);
-      
+      $result6=mysqli_query($link,$query6);
+      $row6=mysqli_fetch_array($result6);
+    
     $string1='';
     $string1= "<h2>".$row[0]."</h2>"; 
     $string2="<h2>".$row1[0]."</h2>";  
     $string3="<h2> ".$row2[0]."</h2>";  
     $string4="<h2> ".$row3[0]."</h2>";  
     $string5="<h2> ".$row4[0]."</h2>";  
-    $string6="<h2> ".$row5[0]."</h2>";  
+    $string6="<h2> ".$row5[0]."</h2>";
+    $string7="<h2> ".$row6[0]." calories</h2>";
     
   
 
@@ -179,6 +184,12 @@
                 <h3>BMI</h3>
             </div>
             <div class="col-sm-6"><?php echo $string3 ?></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Today's Calorie Intake </h3>
+            </div>
+            <div class="col-sm-6"><?php echo $string7 ?></div>
         </div>
         <div class="row">
             <div class="col col-sm-2"><a href="bmi.php"><button class="btn btn-warning mt-2">Update BMI</button></a><a
