@@ -3,20 +3,12 @@
 	$submit='';
 	if((array_key_exists("login", $_SESSION) and $_SESSION["login"]))
 	{
-		$submit='<button type="submit "id="btn" name="submit" onClick="BMI()">Update BMI</button>';
+		$submit='<button id="btn">Update BMI</button>';
 	}
 	$link=mysqli_connect("remotemysql.com","aWheyM4OjS","uSZzAjPiCI","aWheyM4OjS");
 	if(mysqli_connect_error())
 	{
 		die ('database connection error');
-	}
-	if(array_key_exists("submit", $_POST)){
-		$bmi=$_POST['result'];
-		$id=$_SESSION['login'];
-		$query="UPDATE personal_info set bmi=".$bmi." where ".$id."=id";
-		$result=mysqli_query($link,$query);
-		header("location: profile.php");
-		
 	}
 		
 
@@ -28,7 +20,6 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="heart.svg">
     <title>BMI Calculator</title>
 </head>
 <style media="screen">
@@ -116,7 +107,6 @@ function BMI() {
     var bmi = w / (h / 100 * h / 100);
     var bmio = (bmi.toFixed(2));
     document.getElementById("result").innerHTML = "Your BMI is " + bmio;
-    document.getElementById("updateResult").value = bmio;
 }
 </script>
 
@@ -124,15 +114,12 @@ function BMI() {
     <div>
         <h2>BMI Calculator</h2>
         <p class="text">Height</p>
-        <input type="text" id="h" required>
+        <input type="text" id="h">
         <p class="text">Weight</p>
-        <input type="text" id="w" required>
-        <p id="result"></p>
+        <input type="text" id="w">
+        <p id="result" name='result'></p>
         <button id="btn" onClick="BMI()">Calculate</button>
-        <form method="post">
-            <input type="hidden" id="updateResult" name='result'>
-            <?php echo $submit?>
-        </form>
+        <?php echo $submit?>
         <p id="info">Please enter height [cm] and weight [kg]</p>
     </div>
 </body>
