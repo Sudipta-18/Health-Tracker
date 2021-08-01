@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"crossorigin="anonymous" />
+	</head>
+	<style media="screen">
+		body{
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			font-family: sans-serif;
+			background-image: linear-gradient(120deg,#ff6b6b, #5f27cd);
+			min-height: 100vh;
+		}
+		
+			
+		
+		.my-menu {
+              left: 50% !important;
+             right: auto !important;
+          text-align: center !important;
+            transform: translate(-50%, 0) !important;
+			width: 500px;
+			height:500px;
+			position: absolute;
+			top: 20%;
+			left: 50%;
+			background-color: #fff;
+			transform: translate(-50%, -50%);
+			padding: 20px;
+			border-radius: 10px;
+			
+			
+			
+                  }
+	.button1{
+	position:absolute;
+	top:350px;
+	left:200px;
+	}
+	.button2{
+	position:absolute;
+	top:350px;
+	left:300px;
+	}
+	html, body {
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+#h{
+position:absolute;
+left:200px;
+top:100px;
+text:align:center;
+}
+label {
+font-weight:bold;
+position:absolute;
+   left:50px;
+   top:105px;
+   
+}
+input{
+position:absolute;
+top:180px;
+left:200px;
+}
+.lab2{
+position:absolute;
+top:180px;
+}
+.lab3{
+position:absolute;
+top:250px;
+}
+.inp{
+postion:absolute;
+top:250px;
+}
+
+		
+	</style>
+	
+	<body>
+		<div>
+		
+            <form>
+            <div class="dropdown my-menu">
+			<label class="lab">Food Item</label>
+			<button id="h" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"aria-expanded="false">
+				Dropdown button
+			</button>
+			<div class="dropdown-menu"
+				aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item"
+				href="#">Apple</a>
+				<a class="dropdown-item"
+				href="#">Orange</a>
+				<a class="dropdown-item"
+				href="#">Grapes</a>
+			</div>
+		
+       
+		
+		 <label class="lab2">Quantity</label>
+        <input type="text" />
+		 <label class="lab3">Result</label>
+        <input class="inp" type="text"   />
+      
+             <button type="submit" class="btn btn-primary button1">Calculate</button>
+		 <button type="submit" class="btn btn-primary button2">Update</button>
+        </form>
+			
+		</div>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"crossorigin="anonymous"></script>
+	</body>
+</html>
