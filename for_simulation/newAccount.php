@@ -220,7 +220,7 @@ server with default setting (user 'root' with no password) */
                     </div>
                 </div>
 
-                <div class="col-md-3 mb-3">
+                <div class="col-md-7 mb-3">
                     <label for="phone">Contact number</label>
                     <input type="tel" class="form-control" id="phone" name="phone" required>
                     <div class="valid-feedback">
@@ -228,7 +228,7 @@ server with default setting (user 'root' with no password) */
                     </div>
                 </div>
 
-                <div class="col-md-3 mb-3">
+                <div class="col-md-8 mb-3">
                     <label for="dob">Date of Birth</label>
                     <input type="date" class="form-control" name="dob" id="dob" placeholder="dd-mm-yyyy" required>
                     <div class="valid-feedback">
@@ -237,40 +237,24 @@ server with default setting (user 'root' with no password) */
                 </div>
             </div>
 
-            <div class="col-md-3 mb-3">
+            <div class="col-md-9 mb-3">
                 <label for="height">Height</label>
                 <input type="int" class="form-control" name="height" id="height" required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
             </div>
-    </div>
+    
 
-    <div class="col-md-3 mb-3">
+    <div class="col-md-10 mb-3">
         <label for="weight">Weight</label>
         <input type="int" class="form-control" name="weight" id="weight" required>
         <div class="valid-feedback">
             Looks good!
         </div>
     </div>
-    </div>
 
-
-
-
-
-
-
-
-
-
-    <div class="info" id="pswdInf" style="background-color:#212529d6">
-        <p id="pi">Password field</p>
-    </div>
-
-    <div class="form-group">
-        <div class="form-row">
-            <div class="col-md-12 mb-3">
+    <div class="col-md-12 mb-3">
                 <label for="password">Password</label>
                 <input type="password" class="form-control" placeholder="Enter Password" name="password" id="password"
                     minlength="7" required>
@@ -278,15 +262,8 @@ server with default setting (user 'root' with no password) */
                     Please provide password with atleast 7 characters
                 </div>
             </div>
-            <div class="col-md-12 mb-3">
-                <label for="confirmPassword">Confirm Password</label>
-                <input type="password" class="form-control" placeholder="Confirm your Password" name="confirmPassword"
-                    id="confirmPassword" minlength="7" required>
-            </div>
-        </div>
-    </div>
 
-    <div class="form-check">
+            <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
         <label class="form-check-label" for="invalidCheck">
             Agree to terms and conditions
@@ -294,10 +271,27 @@ server with default setting (user 'root' with no password) */
         <div class="invalid-feedback">
             You must agree before submitting.
         </div>
+    </div>   
+
     </div>
+
+         
+
+
+
+
+
+
+
+
+
+
+    
+
+   
+     </div>
     </div>
-    </div>
-    </div>
+    </div> 
     <center>
         <button name="submit" class="btn btn-outline-dark" type="submit">Submit form</button>
     </center>
