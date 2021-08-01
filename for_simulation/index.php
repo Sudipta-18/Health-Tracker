@@ -206,36 +206,6 @@ session_start();
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <a href="optimalintake.html"><div class="service-ico">
-                <span class="ico-circle"><i class="ion-android-phone-portrait"></i></span>
-              </div></a>
-              <div class="service-content">
-                <h2 class="s-title">Optimal Intake</h2>
-                <!-- <p class="s-description text-center">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                  provident vitae! Magni
-                  tempora perferendis eum non provident.
-                </p> -->
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <a href="bmi.php"><div class="service-ico">
-                <span class="ico-circle"><i class="ion-android-phone-portrait"></i></span>
-              </div></a>
-              <div class="service-content">
-                <h2 class="s-title">BMI Calculator</h2>
-                <!-- <p class="s-description text-center">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                  provident vitae! Magni
-                  tempora perferendis eum non provident.
-                </p> -->
-              </div>
-            </div>
-          </div>
           <!-- <div class="col-md-4">
             <div class="service-box">
               <div class="service-ico">

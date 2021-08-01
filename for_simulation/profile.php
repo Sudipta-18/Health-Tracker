@@ -98,14 +98,14 @@
                         Services
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="bmi.php">Calculate BMI</a>
-                        <a class="dropdown-item" href="optimalintake.html">Optimal Intake</a>
-                        <a class="dropdown-item" href="balance.php">Calorie Tracking</a>
-                        <a class="dropdown-item" href="feedback.php">Workout Tracking</a>
+                        <a class="dropdown-item" href="transaction.php">Transfer Money to own bank</a>
+                        <a class="dropdown-item" href="tootherbank.php">Transfer Money to other bank</a>
+                        <a class="dropdown-item" href="balance.php">current balance</a>
+                        <a class="dropdown-item" href="feedback.php">Raise a Complaint</a>
                     </div>
                 </li>
 
-                <!-- <li class="nav-item dropdown bg-primary">
+                <li class="nav-item dropdown bg-primary">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-expanded="false">
                         Account
@@ -117,7 +117,7 @@
                         <a class="dropdown-item" href="deleteAccount.php">Delete Account</a>
 
                     </div>
-                </li> -->
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Home
                     </a>
