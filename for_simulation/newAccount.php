@@ -51,11 +51,11 @@ server with default setting (user 'root' with no password) */
                 $row=mysqli_fetch_array($result);
                 if($row[0]==0)
                 {
-                    echo $dob;
+                    $bmi=$weight/($height/100*$height/100);
                     $sql = "INSERT INTO personal_info(name,email,phone,dob,password,gender,height,weight,bmi)
                                 values ('$full_name','$email','$phone_number','$dob','$password','$gender','$height','$weight','$bmi')";
                     if(mysqli_query($link, $sql)){
-                        echo "I am fine here also";
+                       
                         $last_id = mysqli_insert_id($link); 
                         // email section ends here
                         header("location: login.php");
