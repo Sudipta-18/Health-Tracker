@@ -61,16 +61,12 @@ body{
     z-index: 1;
 }
 
-/* .container div{
-    border: 1px solid;
-} */
-
 .buttons{
     grid-column: -1/1;
     margin: 10px auto;
 }
 
-button{
+.button{
     background-color: #2196F3;
     color: #fff;
     border: 1px solid #a5d7fe;
@@ -85,3 +81,4 @@ button{
 button:disabled {
     background-color: #a5d7fe;
 }
+
