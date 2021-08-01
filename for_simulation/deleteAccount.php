@@ -10,7 +10,7 @@
     {
         header("location: index.php");
     }
-    $link=mysqli_connect("remotemysql.com","IyUUdMcJn4","XU1HaiAhXC","IyUUdMcJn4");
+    $link=mysqli_connect("remotemysql.com","aWheyM4OjS","uSZzAjPiCI","aWheyM4OjS");
     if(mysqli_connect_error())
     {
         die ('database connection error');
@@ -18,16 +18,18 @@
     $string='';
     $password='';
     $account_number='';
+    $email='';
     if(array_key_exists("submit",$_POST))
     {   
-        $password=$_POST['password'];
+        $email=$_SESSION['email'];
+        $password=md5(md5($email).$_POST['password']);
         $account_number=$_SESSION['login'];
-        $query="SELECT password from personal_info where '".$account_number."'=account_number";
+        $query="SELECT password from personal_info where '".$account_number."'=id";
         $result=mysqli_query($link,$query);
         $row=mysqli_fetch_array($result);
         if($row[0]==$password)
         {
-            $query="DELETE from personal_info where '".$account_number."'=account_number";
+            $query="DELETE from personal_info where '".$account_number."'=id";
             $result=mysqli_query($link,$query);
             header("location: login.php?logout=1");
         }
@@ -60,7 +62,7 @@
     <!--External CSS-->
     <link rel="stylesheet" href="deleteAccountStyle.css">
     <title>Delete your Account</title>
-    <link rel="icon" type="image/png" href="navicon.svg">
+    <link rel="icon" type="image/png" href="heart.svg">
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -69,14 +71,14 @@
 
 <body>
 
-    
-        <nav class="navdel bg-primary">
-            <a class="navbar-brand" href="index.php">
-                <img src="navicon.svg" width="50" height="50" alt="" loading="lazy" id="navimg">
-                Apna Bank
-            </a>
-        </nav>
-    
+
+    <nav class="navdel bg-primary">
+        <a class="navbar-brand" href="index.php">
+            <img src="heart.svg" width="50" height="50" alt="" loading="lazy" id="navimg">
+            Fit Trac
+        </a>
+    </nav>
+
 
     <div>
         <?php echo $string ?>
@@ -92,27 +94,28 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-center form_container">
-                    <form  method="POST">
+                    <form method="POST">
                         <div class="input-group mb-3">
-                            
+
                             <p class="apology">We are sorry to let you down</p>
-                            
+
                         </div>
                         <div class="input-group col-md-10 mb-2">
-                            <input type="password" name="password" class="form-control input_pass" value="" placeholder="Confirm Password">
+                            <input type="password" name="password" class="form-control input_pass" value=""
+                                placeholder="Confirm Password">
                         </div>
-                        
-                            <div class="d-flex justify-content-center mt-3 login_container">
-                    <button id="button" type="submit" name="submit" class="btn login_btn">DELETE</button>
-                   </div>
+
+                        <div class="d-flex justify-content-center mt-3 login_container">
+                            <button id="button" type="submit" name="submit" class="btn login_btn">DELETE</button>
+                        </div>
                     </form>
                 </div>
-        
+
                 <div class="mt-4">
                     <div class="d-flex justify-content-center links">
                         <center>
-                        Write to us at <br> <span id="companyMail"> apnabankcc@gmail.com </span>
-                    </center>
+                            Write to us at <br> <span id="companyMail"> feedback@fittrac.com </span>
+                        </center>
                     </div>
                 </div>
             </div>
