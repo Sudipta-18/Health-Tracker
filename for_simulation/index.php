@@ -182,7 +182,7 @@ session_start();
                     </div>
                     <div class="col-md-4">
                         <div class="service-box">
-                            <a href="transactionsummary.php">
+                            <a href="exercise_calculator.php">
                                 <div class="service-ico">
                                     <span class="ico-circle"><i class="fas fa-dumbbell"></i></span>
                                 </div>

@@ -32,6 +32,7 @@
       $query4="select dob from personal_info where ".$_SESSION['login']."=id";
       $query5="select gender from personal_info where ".$_SESSION['login']."=id";
       $query6="SELECT sum(calories) from food_tracking where ".$_SESSION['login']."=id and date='$date'";
+      $query7="SELECT sum(calories_burnt) from workout_tracking where ".$_SESSION['login']."=id and date='$date'";
 
 
       $result=mysqli_query($link,$query);
@@ -48,6 +49,8 @@
       $row5=mysqli_fetch_array($result5);
       $result6=mysqli_query($link,$query6);
       $row6=mysqli_fetch_array($result6);
+      $result7=mysqli_query($link,$query7);
+      $row7=mysqli_fetch_array($result7);
     
     $string1='';
     $string1= "<h2>".$row[0]."</h2>"; 
@@ -57,6 +60,7 @@
     $string5="<h2> ".$row4[0]."</h2>";  
     $string6="<h2> ".$row5[0]."</h2>";
     $string7="<h2> ".$row6[0]." calories</h2>";
+    $string8="<h2> ".$row7[0]." calories</h2>";
     
   
 
@@ -190,6 +194,12 @@
                 <h3>Today's Calorie Intake </h3>
             </div>
             <div class="col-sm-6"><?php echo $string7 ?></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Today's Calorie Burnt </h3>
+            </div>
+            <div class="col-sm-6"><?php echo $string8 ?></div>
         </div>
         <div class="row">
             <div class="col col-sm-2"><a href="bmi.php"><button class="btn btn-warning mt-2">Update BMI</button></a><a
