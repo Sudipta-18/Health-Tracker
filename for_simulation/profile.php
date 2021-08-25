@@ -109,8 +109,8 @@
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="bmi.php">Calculate BMI</a>
                         <a class="dropdown-item" href="optimalintake.html">Optimal Intake</a>
-                        <a class="dropdown-item" href="diet_calculator.php">Calorie Tracking</a>
-                        <a class="dropdown-item" href="exercise_calculator.php">Workout Tracking</a>
+                        <a class="dropdown-item" href="balance.php">Calorie Tracking</a>
+                        <a class="dropdown-item" href="feedback.php">Workout Tracking</a>
                     </div>
                 </li>
 

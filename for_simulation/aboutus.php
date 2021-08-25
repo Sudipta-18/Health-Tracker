@@ -156,9 +156,9 @@
                             <a class="dropdown-item" href="tootherbank.php">Transfer Money to other bank</a>
                             <a class="dropdown-item" href="balance.php">current balance</a>
                             <a class="dropdown-item" href="feedback.php">Raise a Complaint</a>-->
-                            <a class="dropdown-item" href="diet_calculator.php">Diet Calculator</a>
-                            
-                            <a class="dropdown-item" href="bmi.php">BMI Calculator</a>
+                            <a class="dropdown-item" href="">Diet Calculator</a>
+                            <a class="dropdown-item" href="">Exercise Calculator</a>
+                            <a class="dropdown-item" href="">Personalized Diet</a>
                         </div>
                     </li>
 

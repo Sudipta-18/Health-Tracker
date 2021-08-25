@@ -142,11 +142,11 @@
                 <div class="col col-sm-6"><select class="mdb-select md-form form-control" searchable="Search here.."
                         id='food' name='food-item'>
                         <option value="" disabled selected>Select your diet</option>
-                        <option value="24">Apple</option>
-                        <option value="18">Orange</option>
-                        <option value="47">Banana</option>
-                        <option value="30">Grapes</option>
-                        <option value="30">Mango</option>
+                        <option value="1">Apple</option>
+                        <option value="2">Orange</option>
+                        <option value="3">Banana</option>
+                        <option value="4">Grapes</option>
+                        <option value="5">Mango</option>
                     </select></div>
             </div>
             <div class="row mb-2">

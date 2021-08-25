@@ -30,7 +30,7 @@ session_start();
         $string5='<a href="transaction.php" class="block main-div-5">';
         $string6='<a href="tootherbank.php" class="block main-div-4">';
         $str='<li class="nav-item">
-        
+        <a class="nav-link js-scroll" href="feedback.php">feedback</a>
       </li>';
     }
     
